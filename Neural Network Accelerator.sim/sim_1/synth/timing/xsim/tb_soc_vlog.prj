@@ -1,0 +1,7 @@
+# compile verilog/system verilog design source files
+verilog xil_defaultlib  -d "SIMULATION=1" \
+"tb_soc_time_synth.v" \
+"../../../../../Neural Network Accelerator.srcs/sources_1/new/tb_soc_top.v" \
+
+# Do not sort compile order
+nosort

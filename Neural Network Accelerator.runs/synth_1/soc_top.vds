@@ -1,0 +1,596 @@
+#-----------------------------------------------------------
+# Vivado v2023.1 (64-bit)
+# SW Build 3865809 on Sun May  7 15:05:29 MDT 2023
+# IP Build 3864474 on Sun May  7 20:36:21 MDT 2023
+# SharedData Build 3865790 on Sun May 07 13:33:03 MDT 2023
+# Start of session at: Wed Apr 30 16:08:00 2025
+# Process ID: 3160
+# Current directory: Z:/workplace/nn_accelerator/Neural Network Accelerator.runs/synth_1
+# Command line: vivado.exe -log soc_top.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source soc_top.tcl
+# Log file: Z:/workplace/nn_accelerator/Neural Network Accelerator.runs/synth_1/soc_top.vds
+# Journal file: Z:/workplace/nn_accelerator/Neural Network Accelerator.runs/synth_1\vivado.jou
+# Running On: HAYDENTHAIBE5F, OS: Windows, CPU Frequency: 3200 MHz, CPU Physical cores: 4, Host memory: 6436 MB
+#-----------------------------------------------------------
+source soc_top.tcl -notrace
+Command: read_checkpoint -auto_incremental -incremental {Z:/workplace/nn_accelerator/Neural Network Accelerator.srcs/utils_1/imports/synth_1/picorv32_axi.dcp}
+INFO: [Vivado 12-5825] Read reference checkpoint from Z:/workplace/nn_accelerator/Neural Network Accelerator.srcs/utils_1/imports/synth_1/picorv32_axi.dcp for incremental synthesis
+INFO: [Vivado 12-7989] Please ensure there are no constraint changes
+Command: synth_design -top soc_top -part xc7a35ticpg236-1L
+Starting synth_design
+Attempting to get a license for feature 'Synthesis' and/or device 'xc7a35ti'
+INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7a35ti'
+INFO: [Device 21-403] Loading part xc7a35ticpg236-1L
+INFO: [Designutils 20-5440] No compile time benefit to using incremental synthesis; A full resynthesis will be run
+INFO: [Designutils 20-4379] Flow is switching to default flow due to incremental criteria not met. If you would like to alter this behaviour and have the flow terminate instead, please set the following parameter config_implementation {autoIncr.Synth.RejectBehavior Terminate}
+INFO: [Synth 8-7079] Multithreading enabled for synth_design using a maximum of 2 processes.
+INFO: [Synth 8-7078] Launching helper process for spawning children vivado processes
+INFO: [Synth 8-7075] Helper process launched with PID 17584
+---------------------------------------------------------------------------------
+Starting RTL Elaboration : Time (s): cpu = 00:00:13 ; elapsed = 00:00:16 . Memory (MB): peak = 1294.129 ; gain = 411.703
+---------------------------------------------------------------------------------
+INFO: [Synth 8-6157] synthesizing module 'soc_top' [Z:/workplace/nn_accelerator/Neural Network Accelerator.srcs/sources_1/new/soc_top.v:2]
+INFO: [Synth 8-6157] synthesizing module 'picorv32_wrapper' [Z:/workplace/nn_accelerator/Neural Network Accelerator.srcs/sources_1/new/picorv32_wrapper.v:2]
+INFO: [Synth 8-6157] synthesizing module 'picorv32' [Z:/workplace/nn_accelerator/picorv32/picorv32.v:62]
+	Parameter COMPRESSED_ISA bound to: 1'b1 
+	Parameter PROGADDR_RESET bound to: -2147483648 - type: integer 
+INFO: [Synth 8-155] case statement is not full and has no default [Z:/workplace/nn_accelerator/picorv32/picorv32.v:439]
+INFO: [Synth 8-155] case statement is not full and has no default [Z:/workplace/nn_accelerator/picorv32/picorv32.v:455]
+INFO: [Synth 8-155] case statement is not full and has no default [Z:/workplace/nn_accelerator/picorv32/picorv32.v:509]
+INFO: [Synth 8-155] case statement is not full and has no default [Z:/workplace/nn_accelerator/picorv32/picorv32.v:437]
+INFO: [Synth 8-155] case statement is not full and has no default [Z:/workplace/nn_accelerator/picorv32/picorv32.v:904]
+INFO: [Synth 8-155] case statement is not full and has no default [Z:/workplace/nn_accelerator/picorv32/picorv32.v:986]
+INFO: [Synth 8-155] case statement is not full and has no default [Z:/workplace/nn_accelerator/picorv32/picorv32.v:902]
+WARNING: [Synth 8-151] case item 1'b0 is unreachable [Z:/workplace/nn_accelerator/picorv32/picorv32.v:1268]
+WARNING: [Synth 8-151] case item 1'b0 is unreachable [Z:/workplace/nn_accelerator/picorv32/picorv32.v:1314]
+INFO: [Synth 8-155] case statement is not full and has no default [Z:/workplace/nn_accelerator/picorv32/picorv32.v:1314]
+WARNING: [Synth 8-151] case item 1'b0 is unreachable [Z:/workplace/nn_accelerator/picorv32/picorv32.v:1497]
+INFO: [Synth 8-155] case statement is not full and has no default [Z:/workplace/nn_accelerator/picorv32/picorv32.v:1497]
+WARNING: [Synth 8-151] case item 1'b0 is unreachable [Z:/workplace/nn_accelerator/picorv32/picorv32.v:1583]
+WARNING: [Synth 8-151] case item 1'b0 is unreachable [Z:/workplace/nn_accelerator/picorv32/picorv32.v:1583]
+WARNING: [Synth 8-151] case item 1'b0 is unreachable [Z:/workplace/nn_accelerator/picorv32/picorv32.v:1583]
+WARNING: [Synth 8-151] case item 1'b0 is unreachable [Z:/workplace/nn_accelerator/picorv32/picorv32.v:1583]
+WARNING: [Synth 8-151] case item 1'b0 is unreachable [Z:/workplace/nn_accelerator/picorv32/picorv32.v:1583]
+INFO: [Synth 8-6155] done synthesizing module 'picorv32' (0#1) [Z:/workplace/nn_accelerator/picorv32/picorv32.v:62]
+WARNING: [Synth 8-689] width (32) of port connection 'trap' does not match port width (1) of module 'picorv32' [Z:/workplace/nn_accelerator/Neural Network Accelerator.srcs/sources_1/new/picorv32_wrapper.v:22]
+WARNING: [Synth 8-7071] port 'mem_la_read' of module 'picorv32' is unconnected for instance 'picorv32_inst' [Z:/workplace/nn_accelerator/Neural Network Accelerator.srcs/sources_1/new/picorv32_wrapper.v:19]
+WARNING: [Synth 8-7071] port 'mem_la_write' of module 'picorv32' is unconnected for instance 'picorv32_inst' [Z:/workplace/nn_accelerator/Neural Network Accelerator.srcs/sources_1/new/picorv32_wrapper.v:19]
+WARNING: [Synth 8-7071] port 'mem_la_addr' of module 'picorv32' is unconnected for instance 'picorv32_inst' [Z:/workplace/nn_accelerator/Neural Network Accelerator.srcs/sources_1/new/picorv32_wrapper.v:19]
+WARNING: [Synth 8-7071] port 'mem_la_wdata' of module 'picorv32' is unconnected for instance 'picorv32_inst' [Z:/workplace/nn_accelerator/Neural Network Accelerator.srcs/sources_1/new/picorv32_wrapper.v:19]
+WARNING: [Synth 8-7071] port 'mem_la_wstrb' of module 'picorv32' is unconnected for instance 'picorv32_inst' [Z:/workplace/nn_accelerator/Neural Network Accelerator.srcs/sources_1/new/picorv32_wrapper.v:19]
+WARNING: [Synth 8-7071] port 'pcpi_valid' of module 'picorv32' is unconnected for instance 'picorv32_inst' [Z:/workplace/nn_accelerator/Neural Network Accelerator.srcs/sources_1/new/picorv32_wrapper.v:19]
+WARNING: [Synth 8-7071] port 'pcpi_insn' of module 'picorv32' is unconnected for instance 'picorv32_inst' [Z:/workplace/nn_accelerator/Neural Network Accelerator.srcs/sources_1/new/picorv32_wrapper.v:19]
+WARNING: [Synth 8-7071] port 'pcpi_rs1' of module 'picorv32' is unconnected for instance 'picorv32_inst' [Z:/workplace/nn_accelerator/Neural Network Accelerator.srcs/sources_1/new/picorv32_wrapper.v:19]
+WARNING: [Synth 8-7071] port 'pcpi_rs2' of module 'picorv32' is unconnected for instance 'picorv32_inst' [Z:/workplace/nn_accelerator/Neural Network Accelerator.srcs/sources_1/new/picorv32_wrapper.v:19]
+WARNING: [Synth 8-7071] port 'pcpi_wr' of module 'picorv32' is unconnected for instance 'picorv32_inst' [Z:/workplace/nn_accelerator/Neural Network Accelerator.srcs/sources_1/new/picorv32_wrapper.v:19]
+WARNING: [Synth 8-7071] port 'pcpi_rd' of module 'picorv32' is unconnected for instance 'picorv32_inst' [Z:/workplace/nn_accelerator/Neural Network Accelerator.srcs/sources_1/new/picorv32_wrapper.v:19]
+WARNING: [Synth 8-7071] port 'pcpi_wait' of module 'picorv32' is unconnected for instance 'picorv32_inst' [Z:/workplace/nn_accelerator/Neural Network Accelerator.srcs/sources_1/new/picorv32_wrapper.v:19]
+WARNING: [Synth 8-7071] port 'pcpi_ready' of module 'picorv32' is unconnected for instance 'picorv32_inst' [Z:/workplace/nn_accelerator/Neural Network Accelerator.srcs/sources_1/new/picorv32_wrapper.v:19]
+WARNING: [Synth 8-7071] port 'eoi' of module 'picorv32' is unconnected for instance 'picorv32_inst' [Z:/workplace/nn_accelerator/Neural Network Accelerator.srcs/sources_1/new/picorv32_wrapper.v:19]
+WARNING: [Synth 8-7071] port 'trace_valid' of module 'picorv32' is unconnected for instance 'picorv32_inst' [Z:/workplace/nn_accelerator/Neural Network Accelerator.srcs/sources_1/new/picorv32_wrapper.v:19]
+WARNING: [Synth 8-7071] port 'trace_data' of module 'picorv32' is unconnected for instance 'picorv32_inst' [Z:/workplace/nn_accelerator/Neural Network Accelerator.srcs/sources_1/new/picorv32_wrapper.v:19]
+WARNING: [Synth 8-7023] instance 'picorv32_inst' of module 'picorv32' has 27 connections declared, but only 11 given [Z:/workplace/nn_accelerator/Neural Network Accelerator.srcs/sources_1/new/picorv32_wrapper.v:19]
+INFO: [Synth 8-6155] done synthesizing module 'picorv32_wrapper' (0#1) [Z:/workplace/nn_accelerator/Neural Network Accelerator.srcs/sources_1/new/picorv32_wrapper.v:2]
+INFO: [Synth 8-6157] synthesizing module 'flash_controller' [Z:/workplace/nn_accelerator/Neural Network Accelerator.srcs/sources_1/new/flash_model.v:3]
+INFO: [Synth 8-6155] done synthesizing module 'flash_controller' (0#1) [Z:/workplace/nn_accelerator/Neural Network Accelerator.srcs/sources_1/new/flash_model.v:3]
+INFO: [Synth 8-6157] synthesizing module 'mmio' [Z:/workplace/nn_accelerator/Neural Network Accelerator.srcs/sources_1/new/mmio.v:2]
+INFO: [Synth 8-6155] done synthesizing module 'mmio' (0#1) [Z:/workplace/nn_accelerator/Neural Network Accelerator.srcs/sources_1/new/mmio.v:2]
+INFO: [Synth 8-6157] synthesizing module 'sram_controller' [Z:/workplace/nn_accelerator/Neural Network Accelerator.srcs/sources_1/new/dual_port_sram.v:2]
+INFO: [Synth 8-6155] done synthesizing module 'sram_controller' (0#1) [Z:/workplace/nn_accelerator/Neural Network Accelerator.srcs/sources_1/new/dual_port_sram.v:2]
+INFO: [Synth 8-6157] synthesizing module 'nn_accelerator' [Z:/workplace/nn_accelerator/Neural Network Accelerator.srcs/sources_1/new/nn_accelerator.v:2]
+INFO: [Synth 8-6155] done synthesizing module 'nn_accelerator' (0#1) [Z:/workplace/nn_accelerator/Neural Network Accelerator.srcs/sources_1/new/nn_accelerator.v:2]
+INFO: [Synth 8-6157] synthesizing module 'seven_seg' [Z:/workplace/nn_accelerator/Neural Network Accelerator.srcs/sources_1/new/seven_seg.v:2]
+INFO: [Synth 8-6155] done synthesizing module 'seven_seg' (0#1) [Z:/workplace/nn_accelerator/Neural Network Accelerator.srcs/sources_1/new/seven_seg.v:2]
+INFO: [Synth 8-6155] done synthesizing module 'soc_top' (0#1) [Z:/workplace/nn_accelerator/Neural Network Accelerator.srcs/sources_1/new/soc_top.v:2]
+WARNING: [Synth 8-6014] Unused sequential element next_insn_opcode_reg was removed.  [Z:/workplace/nn_accelerator/picorv32/picorv32.v:433]
+WARNING: [Synth 8-6014] Unused sequential element q_ascii_instr_reg was removed.  [Z:/workplace/nn_accelerator/picorv32/picorv32.v:779]
+WARNING: [Synth 8-6014] Unused sequential element q_insn_imm_reg was removed.  [Z:/workplace/nn_accelerator/picorv32/picorv32.v:780]
+WARNING: [Synth 8-6014] Unused sequential element q_insn_opcode_reg was removed.  [Z:/workplace/nn_accelerator/picorv32/picorv32.v:781]
+WARNING: [Synth 8-6014] Unused sequential element q_insn_rs1_reg was removed.  [Z:/workplace/nn_accelerator/picorv32/picorv32.v:782]
+WARNING: [Synth 8-6014] Unused sequential element q_insn_rs2_reg was removed.  [Z:/workplace/nn_accelerator/picorv32/picorv32.v:783]
+WARNING: [Synth 8-6014] Unused sequential element q_insn_rd_reg was removed.  [Z:/workplace/nn_accelerator/picorv32/picorv32.v:784]
+WARNING: [Synth 8-6014] Unused sequential element dbg_next_reg was removed.  [Z:/workplace/nn_accelerator/picorv32/picorv32.v:785]
+WARNING: [Synth 8-6014] Unused sequential element dbg_valid_insn_reg was removed.  [Z:/workplace/nn_accelerator/picorv32/picorv32.v:788]
+WARNING: [Synth 8-6014] Unused sequential element cached_ascii_instr_reg was removed.  [Z:/workplace/nn_accelerator/picorv32/picorv32.v:793]
+WARNING: [Synth 8-6014] Unused sequential element cached_insn_imm_reg was removed.  [Z:/workplace/nn_accelerator/picorv32/picorv32.v:794]
+WARNING: [Synth 8-6014] Unused sequential element cached_insn_opcode_reg was removed.  [Z:/workplace/nn_accelerator/picorv32/picorv32.v:796]
+WARNING: [Synth 8-6014] Unused sequential element cached_insn_rs1_reg was removed.  [Z:/workplace/nn_accelerator/picorv32/picorv32.v:799]
+WARNING: [Synth 8-6014] Unused sequential element cached_insn_rs2_reg was removed.  [Z:/workplace/nn_accelerator/picorv32/picorv32.v:800]
+WARNING: [Synth 8-6014] Unused sequential element cached_insn_rd_reg was removed.  [Z:/workplace/nn_accelerator/picorv32/picorv32.v:801]
+WARNING: [Synth 8-6014] Unused sequential element dbg_insn_addr_reg was removed.  [Z:/workplace/nn_accelerator/picorv32/picorv32.v:805]
+WARNING: [Synth 8-6014] Unused sequential element set_mem_do_rinst_reg was removed.  [Z:/workplace/nn_accelerator/picorv32/picorv32.v:1406]
+WARNING: [Synth 8-6014] Unused sequential element set_mem_do_rdata_reg was removed.  [Z:/workplace/nn_accelerator/picorv32/picorv32.v:1407]
+WARNING: [Synth 8-6014] Unused sequential element set_mem_do_wdata_reg was removed.  [Z:/workplace/nn_accelerator/picorv32/picorv32.v:1408]
+WARNING: [Synth 8-6014] Unused sequential element alu_out_0_q_reg was removed.  [Z:/workplace/nn_accelerator/picorv32/picorv32.v:1410]
+WARNING: [Synth 8-6014] Unused sequential element alu_wait_reg was removed.  [Z:/workplace/nn_accelerator/picorv32/picorv32.v:1413]
+WARNING: [Synth 8-6014] Unused sequential element alu_wait_2_reg was removed.  [Z:/workplace/nn_accelerator/picorv32/picorv32.v:1414]
+WARNING: [Synth 8-6014] Unused sequential element dbg_rs1val_reg was removed.  [Z:/workplace/nn_accelerator/picorv32/picorv32.v:1417]
+WARNING: [Synth 8-6014] Unused sequential element dbg_rs2val_reg was removed.  [Z:/workplace/nn_accelerator/picorv32/picorv32.v:1418]
+WARNING: [Synth 8-6014] Unused sequential element dbg_rs1val_valid_reg was removed.  [Z:/workplace/nn_accelerator/picorv32/picorv32.v:1419]
+WARNING: [Synth 8-6014] Unused sequential element dbg_rs2val_valid_reg was removed.  [Z:/workplace/nn_accelerator/picorv32/picorv32.v:1420]
+WARNING: [Synth 8-6014] Unused sequential element next_irq_pending_reg was removed.  [Z:/workplace/nn_accelerator/picorv32/picorv32.v:1440]
+WARNING: [Synth 8-6014] Unused sequential element decoder_trigger_q_reg was removed.  [Z:/workplace/nn_accelerator/picorv32/picorv32.v:1447]
+WARNING: [Synth 8-6014] Unused sequential element decoder_pseudo_trigger_q_reg was removed.  [Z:/workplace/nn_accelerator/picorv32/picorv32.v:1449]
+WARNING: [Synth 8-6014] Unused sequential element latched_trace_reg was removed.  [Z:/workplace/nn_accelerator/picorv32/picorv32.v:1465]
+WARNING: [Synth 8-6014] Unused sequential element irq_active_reg was removed.  [Z:/workplace/nn_accelerator/picorv32/picorv32.v:1471]
+WARNING: [Synth 8-6014] Unused sequential element irq_delay_reg was removed.  [Z:/workplace/nn_accelerator/picorv32/picorv32.v:1472]
+WARNING: [Synth 8-6014] Unused sequential element irq_mask_reg was removed.  [Z:/workplace/nn_accelerator/picorv32/picorv32.v:1473]
+WARNING: [Synth 8-6014] Unused sequential element timer_reg was removed.  [Z:/workplace/nn_accelerator/picorv32/picorv32.v:1477]
+WARNING: [Synth 8-6014] Unused sequential element current_pc_reg was removed.  [Z:/workplace/nn_accelerator/picorv32/picorv32.v:1495]
+WARNING: [Synth 8-6014] Unused sequential element irq_pending_reg was removed.  [Z:/workplace/nn_accelerator/picorv32/picorv32.v:1963]
+WARNING: [Synth 8-6014] Unused sequential element trace_valid_reg was removed.  [Z:/workplace/nn_accelerator/picorv32/picorv32.v:1452]
+WARNING: [Synth 8-6014] Unused sequential element instr_ecall_ebreak_reg was removed.  [Z:/workplace/nn_accelerator/picorv32/picorv32.v:1086]
+WARNING: [Synth 8-6014] Unused sequential element pcpi_timeout_reg was removed.  [Z:/workplace/nn_accelerator/picorv32/picorv32.v:1470]
+WARNING: [Synth 8-7137] Register image_reg in module nn_accelerator has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code 
+WARNING: [Synth 8-7137] Register layer1_out_reg in module nn_accelerator has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code 
+WARNING: [Synth 8-7137] Register layer2_out_reg in module nn_accelerator has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code 
+WARNING: [Synth 8-7137] Register layer3_out_reg in module nn_accelerator has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code 
+WARNING: [Synth 8-7137] Register max_val_reg in module nn_accelerator has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [Z:/workplace/nn_accelerator/Neural Network Accelerator.srcs/sources_1/new/nn_accelerator.v:254]
+WARNING: [Synth 8-7137] Register argmax_idx_reg in module nn_accelerator has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [Z:/workplace/nn_accelerator/Neural Network Accelerator.srcs/sources_1/new/nn_accelerator.v:255]
+WARNING: [Synth 8-4767] Trying to implement RAM 'image_reg' in registers. Block RAM or DRAM implementation is not possible; see log for reasons.
+Reason is one or more of the following :
+	1: RAM is sensitive to asynchronous reset signal. this RTL style is not supported. 
+RAM "image_reg" dissolved into registers
+WARNING: [Synth 8-4767] Trying to implement RAM 'layer1_out_reg' in registers. Block RAM or DRAM implementation is not possible; see log for reasons.
+Reason is one or more of the following :
+	1: RAM is sensitive to asynchronous reset signal. this RTL style is not supported. 
+RAM "layer1_out_reg" dissolved into registers
+WARNING: [Synth 8-4767] Trying to implement RAM 'layer2_out_reg' in registers. Block RAM or DRAM implementation is not possible; see log for reasons.
+Reason is one or more of the following :
+	1: RAM is sensitive to asynchronous reset signal. this RTL style is not supported. 
+RAM "layer2_out_reg" dissolved into registers
+WARNING: [Synth 8-4767] Trying to implement RAM 'layer3_out_reg' in registers. Block RAM or DRAM implementation is not possible; see log for reasons.
+Reason is one or more of the following :
+	1: RAM is sensitive to asynchronous reset signal. this RTL style is not supported. 
+RAM "layer3_out_reg" dissolved into registers
+WARNING: [Synth 8-3917] design soc_top has port tx_serial driven by constant 1
+WARNING: [Synth 8-7129] Port weight1_base[31] in module nn_accelerator is either unconnected or has no load
+WARNING: [Synth 8-7129] Port weight1_base[30] in module nn_accelerator is either unconnected or has no load
+WARNING: [Synth 8-7129] Port weight1_base[29] in module nn_accelerator is either unconnected or has no load
+WARNING: [Synth 8-7129] Port weight1_base[28] in module nn_accelerator is either unconnected or has no load
+WARNING: [Synth 8-7129] Port weight1_base[27] in module nn_accelerator is either unconnected or has no load
+WARNING: [Synth 8-7129] Port weight1_base[26] in module nn_accelerator is either unconnected or has no load
+WARNING: [Synth 8-7129] Port weight1_base[25] in module nn_accelerator is either unconnected or has no load
+WARNING: [Synth 8-7129] Port weight1_base[24] in module nn_accelerator is either unconnected or has no load
+WARNING: [Synth 8-7129] Port weight1_base[23] in module nn_accelerator is either unconnected or has no load
+WARNING: [Synth 8-7129] Port weight1_base[22] in module nn_accelerator is either unconnected or has no load
+WARNING: [Synth 8-7129] Port weight1_base[21] in module nn_accelerator is either unconnected or has no load
+WARNING: [Synth 8-7129] Port weight1_base[20] in module nn_accelerator is either unconnected or has no load
+WARNING: [Synth 8-7129] Port weight2_base[31] in module nn_accelerator is either unconnected or has no load
+WARNING: [Synth 8-7129] Port weight2_base[30] in module nn_accelerator is either unconnected or has no load
+WARNING: [Synth 8-7129] Port weight2_base[29] in module nn_accelerator is either unconnected or has no load
+WARNING: [Synth 8-7129] Port weight2_base[28] in module nn_accelerator is either unconnected or has no load
+WARNING: [Synth 8-7129] Port weight2_base[27] in module nn_accelerator is either unconnected or has no load
+WARNING: [Synth 8-7129] Port weight2_base[26] in module nn_accelerator is either unconnected or has no load
+WARNING: [Synth 8-7129] Port weight2_base[25] in module nn_accelerator is either unconnected or has no load
+WARNING: [Synth 8-7129] Port weight2_base[24] in module nn_accelerator is either unconnected or has no load
+WARNING: [Synth 8-7129] Port weight2_base[23] in module nn_accelerator is either unconnected or has no load
+WARNING: [Synth 8-7129] Port weight2_base[22] in module nn_accelerator is either unconnected or has no load
+WARNING: [Synth 8-7129] Port weight2_base[21] in module nn_accelerator is either unconnected or has no load
+WARNING: [Synth 8-7129] Port weight2_base[20] in module nn_accelerator is either unconnected or has no load
+WARNING: [Synth 8-7129] Port weight3_base[31] in module nn_accelerator is either unconnected or has no load
+WARNING: [Synth 8-7129] Port weight3_base[30] in module nn_accelerator is either unconnected or has no load
+WARNING: [Synth 8-7129] Port weight3_base[29] in module nn_accelerator is either unconnected or has no load
+WARNING: [Synth 8-7129] Port weight3_base[28] in module nn_accelerator is either unconnected or has no load
+WARNING: [Synth 8-7129] Port weight3_base[27] in module nn_accelerator is either unconnected or has no load
+WARNING: [Synth 8-7129] Port weight3_base[26] in module nn_accelerator is either unconnected or has no load
+WARNING: [Synth 8-7129] Port weight3_base[25] in module nn_accelerator is either unconnected or has no load
+WARNING: [Synth 8-7129] Port weight3_base[24] in module nn_accelerator is either unconnected or has no load
+WARNING: [Synth 8-7129] Port weight3_base[23] in module nn_accelerator is either unconnected or has no load
+WARNING: [Synth 8-7129] Port weight3_base[22] in module nn_accelerator is either unconnected or has no load
+WARNING: [Synth 8-7129] Port weight3_base[21] in module nn_accelerator is either unconnected or has no load
+WARNING: [Synth 8-7129] Port weight3_base[20] in module nn_accelerator is either unconnected or has no load
+WARNING: [Synth 8-7129] Port image_base[31] in module nn_accelerator is either unconnected or has no load
+WARNING: [Synth 8-7129] Port image_base[30] in module nn_accelerator is either unconnected or has no load
+WARNING: [Synth 8-7129] Port image_base[29] in module nn_accelerator is either unconnected or has no load
+WARNING: [Synth 8-7129] Port image_base[28] in module nn_accelerator is either unconnected or has no load
+WARNING: [Synth 8-7129] Port image_base[27] in module nn_accelerator is either unconnected or has no load
+WARNING: [Synth 8-7129] Port image_base[26] in module nn_accelerator is either unconnected or has no load
+WARNING: [Synth 8-7129] Port image_base[25] in module nn_accelerator is either unconnected or has no load
+WARNING: [Synth 8-7129] Port image_base[24] in module nn_accelerator is either unconnected or has no load
+WARNING: [Synth 8-7129] Port image_base[23] in module nn_accelerator is either unconnected or has no load
+WARNING: [Synth 8-7129] Port image_base[22] in module nn_accelerator is either unconnected or has no load
+WARNING: [Synth 8-7129] Port image_base[21] in module nn_accelerator is either unconnected or has no load
+WARNING: [Synth 8-7129] Port image_base[20] in module nn_accelerator is either unconnected or has no load
+WARNING: [Synth 8-7129] Port sram_data[15] in module sram_controller is either unconnected or has no load
+WARNING: [Synth 8-7129] Port sram_data[14] in module sram_controller is either unconnected or has no load
+WARNING: [Synth 8-7129] Port sram_data[13] in module sram_controller is either unconnected or has no load
+WARNING: [Synth 8-7129] Port sram_data[12] in module sram_controller is either unconnected or has no load
+WARNING: [Synth 8-7129] Port sram_data[11] in module sram_controller is either unconnected or has no load
+WARNING: [Synth 8-7129] Port sram_data[10] in module sram_controller is either unconnected or has no load
+WARNING: [Synth 8-7129] Port sram_data[9] in module sram_controller is either unconnected or has no load
+WARNING: [Synth 8-7129] Port sram_data[8] in module sram_controller is either unconnected or has no load
+WARNING: [Synth 8-7129] Port sram_data[7] in module sram_controller is either unconnected or has no load
+WARNING: [Synth 8-7129] Port sram_data[6] in module sram_controller is either unconnected or has no load
+WARNING: [Synth 8-7129] Port sram_data[5] in module sram_controller is either unconnected or has no load
+WARNING: [Synth 8-7129] Port sram_data[4] in module sram_controller is either unconnected or has no load
+WARNING: [Synth 8-7129] Port sram_data[3] in module sram_controller is either unconnected or has no load
+WARNING: [Synth 8-7129] Port sram_data[2] in module sram_controller is either unconnected or has no load
+WARNING: [Synth 8-7129] Port sram_data[1] in module sram_controller is either unconnected or has no load
+WARNING: [Synth 8-7129] Port sram_data[0] in module sram_controller is either unconnected or has no load
+WARNING: [Synth 8-7129] Port clk in module sram_controller is either unconnected or has no load
+WARNING: [Synth 8-7129] Port rst in module sram_controller is either unconnected or has no load
+WARNING: [Synth 8-7129] Port cpu_write in module sram_controller is either unconnected or has no load
+WARNING: [Synth 8-7129] Port cpu_wdata[31] in module sram_controller is either unconnected or has no load
+WARNING: [Synth 8-7129] Port cpu_wdata[30] in module sram_controller is either unconnected or has no load
+WARNING: [Synth 8-7129] Port cpu_wdata[29] in module sram_controller is either unconnected or has no load
+WARNING: [Synth 8-7129] Port cpu_wdata[28] in module sram_controller is either unconnected or has no load
+WARNING: [Synth 8-7129] Port cpu_wdata[27] in module sram_controller is either unconnected or has no load
+WARNING: [Synth 8-7129] Port cpu_wdata[26] in module sram_controller is either unconnected or has no load
+WARNING: [Synth 8-7129] Port cpu_wdata[25] in module sram_controller is either unconnected or has no load
+WARNING: [Synth 8-7129] Port cpu_wdata[24] in module sram_controller is either unconnected or has no load
+WARNING: [Synth 8-7129] Port cpu_wdata[23] in module sram_controller is either unconnected or has no load
+WARNING: [Synth 8-7129] Port cpu_wdata[22] in module sram_controller is either unconnected or has no load
+WARNING: [Synth 8-7129] Port cpu_wdata[21] in module sram_controller is either unconnected or has no load
+WARNING: [Synth 8-7129] Port cpu_wdata[20] in module sram_controller is either unconnected or has no load
+WARNING: [Synth 8-7129] Port cpu_wdata[19] in module sram_controller is either unconnected or has no load
+WARNING: [Synth 8-7129] Port cpu_wdata[18] in module sram_controller is either unconnected or has no load
+WARNING: [Synth 8-7129] Port cpu_wdata[17] in module sram_controller is either unconnected or has no load
+WARNING: [Synth 8-7129] Port cpu_wdata[16] in module sram_controller is either unconnected or has no load
+WARNING: [Synth 8-7129] Port cpu_wdata[15] in module sram_controller is either unconnected or has no load
+WARNING: [Synth 8-7129] Port cpu_wdata[14] in module sram_controller is either unconnected or has no load
+WARNING: [Synth 8-7129] Port cpu_wdata[13] in module sram_controller is either unconnected or has no load
+WARNING: [Synth 8-7129] Port cpu_wdata[12] in module sram_controller is either unconnected or has no load
+WARNING: [Synth 8-7129] Port cpu_wdata[11] in module sram_controller is either unconnected or has no load
+WARNING: [Synth 8-7129] Port cpu_wdata[10] in module sram_controller is either unconnected or has no load
+WARNING: [Synth 8-7129] Port cpu_wdata[9] in module sram_controller is either unconnected or has no load
+WARNING: [Synth 8-7129] Port cpu_wdata[8] in module sram_controller is either unconnected or has no load
+WARNING: [Synth 8-7129] Port cpu_wdata[7] in module sram_controller is either unconnected or has no load
+WARNING: [Synth 8-7129] Port cpu_wdata[6] in module sram_controller is either unconnected or has no load
+WARNING: [Synth 8-7129] Port cpu_wdata[5] in module sram_controller is either unconnected or has no load
+WARNING: [Synth 8-7129] Port cpu_wdata[4] in module sram_controller is either unconnected or has no load
+WARNING: [Synth 8-7129] Port cpu_wdata[3] in module sram_controller is either unconnected or has no load
+WARNING: [Synth 8-7129] Port cpu_wdata[2] in module sram_controller is either unconnected or has no load
+WARNING: [Synth 8-7129] Port cpu_wdata[1] in module sram_controller is either unconnected or has no load
+WARNING: [Synth 8-7129] Port cpu_wdata[0] in module sram_controller is either unconnected or has no load
+WARNING: [Synth 8-7129] Port nn_valid in module sram_controller is either unconnected or has no load
+INFO: [Common 17-14] Message 'Synth 8-7129' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
+---------------------------------------------------------------------------------
+Finished RTL Elaboration : Time (s): cpu = 00:00:19 ; elapsed = 00:00:23 . Memory (MB): peak = 1483.832 ; gain = 601.406
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:20 ; elapsed = 00:00:25 . Memory (MB): peak = 1483.832 ; gain = 601.406
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:20 ; elapsed = 00:00:25 . Memory (MB): peak = 1483.832 ; gain = 601.406
+---------------------------------------------------------------------------------
+Netlist sorting complete. Time (s): cpu = 00:00:01 ; elapsed = 00:00:00.436 . Memory (MB): peak = 1483.832 ; gain = 0.000
+INFO: [Project 1-570] Preparing netlist for logic optimization
+
+Processing XDC Constraints
+Initializing timing engine
+Parsing XDC File [Z:/workplace/nn_accelerator/Neural Network Accelerator.srcs/constrs_1/new/basys.xdc]
+Finished Parsing XDC File [Z:/workplace/nn_accelerator/Neural Network Accelerator.srcs/constrs_1/new/basys.xdc]
+INFO: [Project 1-236] Implementation specific constraints were found while reading constraint file [Z:/workplace/nn_accelerator/Neural Network Accelerator.srcs/constrs_1/new/basys.xdc]. These constraints will be ignored for synthesis but will be used in implementation. Impacted constraints are listed in the file [.Xil/soc_top_propImpl.xdc].
+Resolution: To avoid this warning, move constraints listed in [.Xil/soc_top_propImpl.xdc] to another XDC file and exclude this new file from synthesis with the used_in_synthesis property (File Properties dialog in GUI) and re-run elaboration/synthesis.
+Completed Processing XDC Constraints
+
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.008 . Memory (MB): peak = 1588.730 ; gain = 0.000
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.181 . Memory (MB): peak = 1588.730 ; gain = 0.000
+INFO: [Designutils 20-5440] No compile time benefit to using incremental synthesis; A full resynthesis will be run
+INFO: [Designutils 20-4379] Flow is switching to default flow due to incremental criteria not met. If you would like to alter this behaviour and have the flow terminate instead, please set the following parameter config_implementation {autoIncr.Synth.RejectBehavior Terminate}
+---------------------------------------------------------------------------------
+Finished Constraint Validation : Time (s): cpu = 00:00:44 ; elapsed = 00:00:51 . Memory (MB): peak = 1588.730 ; gain = 706.305
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Loading Part and Timing Information
+---------------------------------------------------------------------------------
+Loading part: xc7a35ticpg236-1L
+---------------------------------------------------------------------------------
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:44 ; elapsed = 00:00:51 . Memory (MB): peak = 1588.730 ; gain = 706.305
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Applying 'set_property' XDC Constraints
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:44 ; elapsed = 00:00:51 . Memory (MB): peak = 1588.730 ; gain = 706.305
+---------------------------------------------------------------------------------
+INFO: [Synth 8-802] inferred FSM for state register 'mem_state_reg' in module 'picorv32'
+---------------------------------------------------------------------------------------------------
+                   State |                     New Encoding |                Previous Encoding 
+---------------------------------------------------------------------------------------------------
+                 iSTATE2 |                               00 |                               00
+                 iSTATE0 |                               01 |                               10
+                  iSTATE |                               10 |                               01
+                 iSTATE1 |                               11 |                               11
+---------------------------------------------------------------------------------------------------
+INFO: [Synth 8-3354] encoded FSM with state register 'mem_state_reg' using encoding 'sequential' in module 'picorv32'
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:55 ; elapsed = 00:01:05 . Memory (MB): peak = 1588.730 ; gain = 706.305
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start RTL Component Statistics 
+---------------------------------------------------------------------------------
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input   32 Bit       Adders := 5     
+	   3 Input   32 Bit       Adders := 1     
+	   2 Input   30 Bit       Adders := 1     
+	   2 Input   20 Bit       Adders := 1     
+	   2 Input   16 Bit       Adders := 2     
+	   2 Input    5 Bit       Adders := 2     
+	   2 Input    1 Bit       Adders := 1     
++---XORs : 
+	   2 Input     32 Bit         XORs := 1     
++---Registers : 
+	               36 Bit    Registers := 1     
+	               32 Bit    Registers := 16    
+	               20 Bit    Registers := 1     
+	               16 Bit    Registers := 892   
+	                8 Bit    Registers := 1     
+	                5 Bit    Registers := 7     
+	                4 Bit    Registers := 4     
+	                2 Bit    Registers := 2     
+	                1 Bit    Registers := 87    
++---RAMs : 
+	             1024 Bit	(32 X 32 bit)          RAMs := 1     
++---Muxes : 
+	  18 Input   32 Bit        Muxes := 1     
+	   2 Input   32 Bit        Muxes := 32    
+	   4 Input   32 Bit        Muxes := 11    
+	   5 Input   32 Bit        Muxes := 1     
+	   6 Input   32 Bit        Muxes := 1     
+	   3 Input   32 Bit        Muxes := 2     
+	   9 Input   32 Bit        Muxes := 2     
+	  18 Input   20 Bit        Muxes := 2     
+	   2 Input   20 Bit        Muxes := 1     
+	  18 Input   16 Bit        Muxes := 1     
+	   2 Input   16 Bit        Muxes := 6     
+	   6 Input   16 Bit        Muxes := 1     
+	   4 Input    8 Bit        Muxes := 1     
+	   7 Input    8 Bit        Muxes := 1     
+	   9 Input    8 Bit        Muxes := 1     
+	   2 Input    8 Bit        Muxes := 1     
+	   2 Input    6 Bit        Muxes := 1     
+	   2 Input    5 Bit        Muxes := 16    
+	   4 Input    5 Bit        Muxes := 3     
+	   8 Input    5 Bit        Muxes := 2     
+	   5 Input    5 Bit        Muxes := 4     
+	   9 Input    5 Bit        Muxes := 2     
+	   2 Input    4 Bit        Muxes := 8     
+	  18 Input    4 Bit        Muxes := 2     
+	   4 Input    4 Bit        Muxes := 4     
+	   5 Input    4 Bit        Muxes := 1     
+	   3 Input    4 Bit        Muxes := 1     
+	   2 Input    3 Bit        Muxes := 3     
+	  18 Input    3 Bit        Muxes := 1     
+	   5 Input    3 Bit        Muxes := 1     
+	   2 Input    2 Bit        Muxes := 4     
+	   4 Input    2 Bit        Muxes := 2     
+	   9 Input    2 Bit        Muxes := 1     
+	   2 Input    1 Bit        Muxes := 166   
+	  18 Input    1 Bit        Muxes := 12    
+	   9 Input    1 Bit        Muxes := 25    
+	   4 Input    1 Bit        Muxes := 19    
+	   8 Input    1 Bit        Muxes := 5     
+	   5 Input    1 Bit        Muxes := 5     
+	   7 Input    1 Bit        Muxes := 3     
+	   3 Input    1 Bit        Muxes := 3     
+---------------------------------------------------------------------------------
+Finished RTL Component Statistics 
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Part Resource Summary
+---------------------------------------------------------------------------------
+Part Resources:
+DSPs: 90 (col length:60)
+BRAMs: 100 (col length: RAMB18 60 RAMB36 30)
+---------------------------------------------------------------------------------
+Finished Part Resource Summary
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Cross Boundary and Area Optimization
+---------------------------------------------------------------------------------
+WARNING: [Synth 8-7080] Parallel synthesis criteria is not met
+DSP Report: Generating DSP p_1_out, operation Mode is: C+A*B.
+DSP Report: operator p_1_out is absorbed into DSP p_1_out.
+DSP Report: operator p_0_out is absorbed into DSP p_1_out.
+DSP Report: Generating DSP sram_addr2, operation Mode is: A*(B:0x311).
+DSP Report: operator sram_addr2 is absorbed into DSP sram_addr2.
+DSP Report: Generating DSP sram_addr2, operation Mode is: C+A*(B:0x311)+1.
+DSP Report: operator sram_addr2 is absorbed into DSP sram_addr2.
+DSP Report: operator sram_addr2 is absorbed into DSP sram_addr2.
+DSP Report: Generating DSP sram_addr2, operation Mode is: A*(B:0x41).
+DSP Report: operator sram_addr2 is absorbed into DSP sram_addr2.
+DSP Report: Generating DSP sram_addr2, operation Mode is: C+A*(B:0x41)+1.
+DSP Report: operator sram_addr2 is absorbed into DSP sram_addr2.
+DSP Report: operator sram_addr2 is absorbed into DSP sram_addr2.
+DSP Report: Generating DSP sram_addr2, operation Mode is: A*(B:0x21).
+DSP Report: operator sram_addr2 is absorbed into DSP sram_addr2.
+DSP Report: Generating DSP sram_addr2, operation Mode is: C+A*(B:0x21)+1.
+DSP Report: operator sram_addr2 is absorbed into DSP sram_addr2.
+DSP Report: operator sram_addr2 is absorbed into DSP sram_addr2.
+WARNING: [Synth 8-3917] design soc_top has port tx_serial driven by constant 1
+---------------------------------------------------------------------------------
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:01:44 ; elapsed = 00:01:59 . Memory (MB): peak = 1588.730 ; gain = 706.305
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start ROM, RAM, DSP, Shift Register and Retiming Reporting
+---------------------------------------------------------------------------------
+
+ROM: Preliminary Mapping Report
++---------------+------------+---------------+----------------+
+|Module Name    | RTL Object | Depth x Width | Implemented As | 
++---------------+------------+---------------+----------------+
+|nn_accelerator | sram_addr  | 32x1          | LUT            | 
+|soc_top        | sram_addr  | 32x1          | LUT            | 
++---------------+------------+---------------+----------------+
+
+
+Distributed RAM: Preliminary Mapping Report (see note below)
++-----------------------------+-------------+-----------+----------------------+--------------+
+|Module Name                  | RTL Object  | Inference | Size (Depth x Width) | Primitives   | 
++-----------------------------+-------------+-----------+----------------------+--------------+
+|i_0/\cpu_inst/picorv32_inst  | cpuregs_reg | Implied   | 32 x 32              | RAM32M x 12  | 
++-----------------------------+-------------+-----------+----------------------+--------------+
+
+Note: The table above is a preliminary report that shows the Distributed RAMs at the current stage of the synthesis flow. Some Distributed RAMs may be reimplemented as non Distributed RAM primitives later in the synthesis flow. Multiple instantiated RAMs are reported only once.
+
+DSP: Preliminary Mapping Report (see note below. The ' indicates corresponding REG is set)
++---------------+-----------------+--------+--------+--------+--------+--------+------+------+------+------+-------+------+------+
+|Module Name    | DSP Mapping     | A Size | B Size | C Size | D Size | P Size | AREG | BREG | CREG | DREG | ADREG | MREG | PREG | 
++---------------+-----------------+--------+--------+--------+--------+--------+------+------+------+------+-------+------+------+
+|nn_accelerator | C+A*B           | 16     | 16     | 32     | -      | 32     | 0    | 0    | 0    | -    | -     | 0    | 0    | 
+|nn_accelerator | A*(B:0x311)     | 16     | 10     | -      | -      | 26     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|nn_accelerator | C+A*(B:0x311)+1 | 16     | 10     | 16     | -      | 19     | 0    | 0    | 0    | -    | -     | 0    | 0    | 
+|nn_accelerator | A*(B:0x41)      | 16     | 7      | -      | -      | 23     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|nn_accelerator | C+A*(B:0x41)+1  | 16     | 7      | 16     | -      | 19     | 0    | 0    | 0    | -    | -     | 0    | 0    | 
+|nn_accelerator | A*(B:0x21)      | 16     | 6      | -      | -      | 22     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|nn_accelerator | C+A*(B:0x21)+1  | 16     | 6      | 16     | -      | 19     | 0    | 0    | 0    | -    | -     | 0    | 0    | 
++---------------+-----------------+--------+--------+--------+--------+--------+------+------+------+------+-------+------+------+
+
+Note: The table above is a preliminary report that shows the DSPs inferred at the current stage of the synthesis flow. Some DSP may be reimplemented as non DSP primitives later in the synthesis flow. Multiple instantiated DSPs are reported only once.
+---------------------------------------------------------------------------------
+Finished ROM, RAM, DSP, Shift Register and Retiming Reporting
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Applying XDC Timing Constraints
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:02:26 ; elapsed = 00:02:43 . Memory (MB): peak = 1588.730 ; gain = 706.305
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Timing Optimization
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Timing Optimization : Time (s): cpu = 00:02:36 ; elapsed = 00:02:53 . Memory (MB): peak = 1588.730 ; gain = 706.305
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start ROM, RAM, DSP, Shift Register and Retiming Reporting
+---------------------------------------------------------------------------------
+
+Distributed RAM: Final Mapping Report
++-----------------------------+-------------+-----------+----------------------+--------------+
+|Module Name                  | RTL Object  | Inference | Size (Depth x Width) | Primitives   | 
++-----------------------------+-------------+-----------+----------------------+--------------+
+|i_0/\cpu_inst/picorv32_inst  | cpuregs_reg | Implied   | 32 x 32              | RAM32M x 12  | 
++-----------------------------+-------------+-----------+----------------------+--------------+
+
+---------------------------------------------------------------------------------
+Finished ROM, RAM, DSP, Shift Register and Retiming Reporting
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Technology Mapping
+---------------------------------------------------------------------------------
+WARNING: [Synth 8-3332] Sequential element (cpu_inst/picorv32_inst/FSM_sequential_mem_state_reg[1]) is unused and will be removed from module soc_top.
+WARNING: [Synth 8-3332] Sequential element (cpu_inst/picorv32_inst/FSM_sequential_mem_state_reg[0]) is unused and will be removed from module soc_top.
+---------------------------------------------------------------------------------
+Finished Technology Mapping : Time (s): cpu = 00:02:40 ; elapsed = 00:02:57 . Memory (MB): peak = 1588.730 ; gain = 706.305
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished IO Insertion : Time (s): cpu = 00:02:49 ; elapsed = 00:03:07 . Memory (MB): peak = 1588.730 ; gain = 706.305
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Instances
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Instances : Time (s): cpu = 00:02:49 ; elapsed = 00:03:07 . Memory (MB): peak = 1588.730 ; gain = 706.305
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Rebuilding User Hierarchy
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:02:49 ; elapsed = 00:03:08 . Memory (MB): peak = 1588.730 ; gain = 706.305
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Ports
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Ports : Time (s): cpu = 00:02:49 ; elapsed = 00:03:08 . Memory (MB): peak = 1588.730 ; gain = 706.305
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:02:50 ; elapsed = 00:03:08 . Memory (MB): peak = 1588.730 ; gain = 706.305
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Nets
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Nets : Time (s): cpu = 00:02:50 ; elapsed = 00:03:08 . Memory (MB): peak = 1588.730 ; gain = 706.305
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Writing Synthesis Report
+---------------------------------------------------------------------------------
+
+DSP Final Report (the ' indicates corresponding REG is set)
++---------------+-------------+--------+--------+--------+--------+--------+------+------+------+------+-------+------+------+
+|Module Name    | DSP Mapping | A Size | B Size | C Size | D Size | P Size | AREG | BREG | CREG | DREG | ADREG | MREG | PREG | 
++---------------+-------------+--------+--------+--------+--------+--------+------+------+------+------+-------+------+------+
+|nn_accelerator | C+A*B       | 0      | 18     | 48     | -      | 32     | 0    | 0    | 0    | -    | -     | 0    | 0    | 
++---------------+-------------+--------+--------+--------+--------+--------+------+------+------+------+-------+------+------+
+
+
+Report BlackBoxes: 
++-+--------------+----------+
+| |BlackBox name |Instances |
++-+--------------+----------+
++-+--------------+----------+
+
+Report Cell Usage: 
++------+--------+------+
+|      |Cell    |Count |
++------+--------+------+
+|1     |BUFG    |     1|
+|2     |CARRY4  |    15|
+|3     |DSP48E1 |     1|
+|4     |LUT1    |     1|
+|5     |LUT2    |    62|
+|6     |LUT3    |    35|
+|7     |LUT4    |   116|
+|8     |LUT5    |    84|
+|9     |LUT6    |   566|
+|10    |MUXF7   |   156|
+|11    |MUXF8   |    73|
+|12    |FDCE    |    74|
+|13    |FDRE    |  1716|
+|14    |IBUF    |     2|
+|15    |OBUF    |    13|
++------+--------+------+
+---------------------------------------------------------------------------------
+Finished Writing Synthesis Report : Time (s): cpu = 00:02:50 ; elapsed = 00:03:08 . Memory (MB): peak = 1588.730 ; gain = 706.305
+---------------------------------------------------------------------------------
+Synthesis finished with 0 errors, 0 critical warnings and 5 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:02:19 ; elapsed = 00:02:56 . Memory (MB): peak = 1588.730 ; gain = 601.406
+Synthesis Optimization Complete : Time (s): cpu = 00:02:50 ; elapsed = 00:03:08 . Memory (MB): peak = 1588.730 ; gain = 706.305
+INFO: [Project 1-571] Translating synthesized netlist
+Netlist sorting complete. Time (s): cpu = 00:00:01 ; elapsed = 00:00:00.043 . Memory (MB): peak = 1588.973 ; gain = 0.000
+INFO: [Netlist 29-17] Analyzing 245 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+WARNING: [Netlist 29-101] Netlist 'soc_top' is not ideal for floorplanning, since the cellview 'nn_accelerator' contains a large number of primitives.  Please consider enabling hierarchy in synthesis if you want to do floorplanning.
+INFO: [Project 1-570] Preparing netlist for logic optimization
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.001 . Memory (MB): peak = 1592.789 ; gain = 0.000
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+Synth Design complete | Checksum: aef4f0dc
+INFO: [Common 17-83] Releasing license: Synthesis
+49 Infos, 181 Warnings, 0 Critical Warnings and 0 Errors encountered.
+synth_design completed successfully
+INFO: [Common 17-600] The following parameters have non-default value.
+tcl.statsThreshold
+INFO: [Common 17-1381] The checkpoint 'Z:/workplace/nn_accelerator/Neural Network Accelerator.runs/synth_1/soc_top.dcp' has been generated.
+INFO: [runtcl-4] Executing : report_utilization -file soc_top_utilization_synth.rpt -pb soc_top_utilization_synth.pb
+INFO: [Common 17-206] Exiting Vivado at Wed Apr 30 16:12:01 2025...
